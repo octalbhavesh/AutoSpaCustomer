@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:overScrollMode="never">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_header_height"
+        android:gravity="center|bottom"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="10dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <RelativeLayout
+            android:id="@+id/actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/user_profile_pic_iv"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:src="@drawable/user" />
+
+
+                    <ImageView
+                        android:id="@+id/header_img"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:src="@drawable/user_bg" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.poshwash.android.customViews.CustomTexViewRegular
+            android:id="@+id/welcome_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/welcome"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/graycolor"
+            />
+
+        <com.poshwash.android.customViews.CustomTexView
+            android:id="@+id/user_profile_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/greencolor"
+
+            tools:text="Sara Thomas" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/nav_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/greencolor"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/home_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="start|center"
+                android:text="@string/home"
+                android:textColor="@color/whitecolor"
+                android:textSize="@dimen/textsize_16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/notificationtextcolor" />
+
+        <LinearLayout
+            android:id="@+id/nav_manage_vehicle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/manage_vehicle_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="start|center"
+                android:text="@string/manage_vehicle"
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/notificationtextcolor" />
+
+        <LinearLayout
+            android:id="@+id/nav_booking_vehicle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/booking_vehicle_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="start|center"
+                android:text="@string/my_booking"
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/notificationtextcolor" />
+
+        <LinearLayout
+            android:id="@+id/nav_pastBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/pastBooking_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center|start"
+                android:text="@string/past_booking"
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/notificationtextcolor"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/nav_upcommingBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/upcommingBooking_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:gravity="center|start"
+                android:text="@string/upcoming_bookings"
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/textsize_16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/notificationtextcolor" />
+
+        <LinearLayout
+            android:id="@+id/nav_transaction_history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/transaction_history_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center|start"
+                android:text="@string/transaction_history"
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:visibility="gone"
+            android:background="@color/notificationtextcolor" />
+
+        <LinearLayout
+            android:id="@+id/nav_packages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="10dp">
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/packages_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center|start"
+                android:text="@string/packages"
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/textsize_16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/notificationtextcolor" />
+
+        <LinearLayout
+            android:id="@+id/nav_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/notification_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center|start"
+                android:text="@string/notification"
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/textsize_16" />
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/notificationCountTv"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/noti_count_back"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:gravity="end|center">
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/notification_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+
+                    android:theme="@style/SCBSwitch" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/notificationtextcolor" />
+
+        <LinearLayout
+            android:id="@+id/nav_free_wash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|start"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/free_wash_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center|start"
+                android:text="@string/free_wash"
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/notificationtextcolor" />
+
+        <LinearLayout
+            android:id="@+id/nav_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/settings_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center|start"
+                android:text="@string/settings"
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/textsize_16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/notificationtextcolor" />
+        <LinearLayout
+            android:id="@+id/nav_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/card_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center|start"
+                android:text="@string/card_info"
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/textsize_16" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/notificationtextcolor" />
+
+        <LinearLayout
+            android:id="@+id/nav_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/logout_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center|start"
+                android:text="@string/logout"
+                android:textColor="@color/skybluecolor"
+                android:textSize="@dimen/textsize_16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/notificationtextcolor" />
+    </LinearLayout>
+</LinearLayout>

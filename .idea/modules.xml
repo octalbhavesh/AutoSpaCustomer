@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/autoSpa.iml" filepath="$PROJECT_DIR$/autoSpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CirclePageIndicator/autoSpa.CirclePageIndicator.iml" filepath="$PROJECT_DIR$/.idea/modules/CirclePageIndicator/autoSpa.CirclePageIndicator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/autoSpa.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/autoSpa.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imagechoose/autoSpa.imagechoose.iml" filepath="$PROJECT_DIR$/.idea/modules/imagechoose/autoSpa.imagechoose.iml" />
+    </modules>
+  </component>
+</project>

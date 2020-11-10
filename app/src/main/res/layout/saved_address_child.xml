@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp">
+
+
+    <com.poshwash.android.customViews.CustomTexViewRegular
+        android:id="@+id/txt_edit_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="John Smith \n701, Block -B , Carlton VIC, Sydney-380051, \nQueensland, Australia +022-2545764"
+        android:textSize="@dimen/_12sdp"
+        android:layout_toStartOf="@+id/radio_btn_normaluser"/>
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/radio_btn_normaluser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/radiobutton_selector"
+        android:checked="false"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        tools:ignore="RtlSymmetry" />
+
+</RelativeLayout>

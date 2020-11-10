@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/toggle_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/menu" />
+
+            <com.poshwash.android.customViews.CustomTexViewBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:text="@string/free_wash"
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/_15sdp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp" />
+
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <com.poshwash.android.customViews.CustomTexViewBold
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.3"
+            android:gravity="bottom"
+            android:text="@string/share_msg"
+            android:textColor="@color/blackcolor"
+            android:textSize="@dimen/_15sdp" />
+
+        <com.poshwash.android.customViews.CustomTexViewBold
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight="0.2"
+            android:text="@string/free_wash"
+            android:textColor="@color/blackcolor"
+            android:textSize="@dimen/_15sdp" />
+
+        <com.poshwash.android.customViews.CustomTexView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_weight="0.5"
+            android:text="@string/share_message"
+            android:textColor="@color/skybluecolor"
+            android:textSize="@dimen/_15sdp" />
+
+        <ImageView
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="0dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:src="@drawable/img_refer" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_80sdp"
+            android:layout_weight="0.3">
+
+            <com.poshwash.android.customViews.CustomTexView
+                android:id="@+id/tv_refer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/border_refer"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/blackcolor"
+                android:textSize="@dimen/_15sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7">
+
+            <com.poshwash.android.customViews.CustomButtonBold
+                android:id="@+id/btn_share"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+              android:layout_gravity="center"
+                android:background="@drawable/background_button"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/share"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

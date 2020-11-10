@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dialog_white_border"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/skybluecolor">
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:id="@+id/backIv"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back_icon" />
+
+                <com.poshwash.android.customViews.CustomTexViewBold
+                    android:id="@+id/heading_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/backIv"
+                    android:gravity="center|start"
+                    android:padding="10dp"
+                    android:text="@string/preview_details"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="20sp" />
+
+                <com.poshwash.android.customViews.CustomTexViewBold
+                    android:id="@+id/jobPriceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+
+            </RelativeLayout>
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/driverPicIv"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:src="@drawable/user" />
+
+                        <com.poshwash.android.customViews.CustomTexViewBold
+                            android:id="@+id/driverNameTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="Steve Smith"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <com.poshwash.android.customViews.CustomTexViewRegular
+                            android:id="@+id/driverPhoneTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:drawableStart="@drawable/phonegrey"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                            android:id="@+id/driverRatingBar"
+                            style="@style/Widget.MaterialRatingBar.RatingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:clickable="false"
+                            android:isIndicator="true"
+                            android:max="5"
+                            android:maxHeight="48dp"
+                            android:minHeight="20dp"
+                            android:rating="3"
+                            app:mrb_progressTint="@color/colorPrimary"
+                            app:mrb_secondaryProgressTint="@color/colorPrimary" />
+
+                        <com.balysv.materialripple.MaterialRippleLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            app:mrl_rippleAlpha="0.1"
+                            app:mrl_rippleColor="@color/white"
+                            app:mrl_rippleDelayClick="true"
+                            app:mrl_rippleDimension="10dp"
+                            app:mrl_rippleDuration="350"
+                            app:mrl_rippleHover="true"
+                            app:mrl_rippleOverlay="true"
+                            app:mrl_ripplePersistent="false"
+                            app:mrl_rippleRoundedCorners="@dimen/_30sdp">
+
+                            <com.poshwash.android.customViews.CustomButtonBold
+                                android:id="@+id/changeDriverBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_30sdp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/mybuttonsubmit"
+                                android:gravity="center"
+                                android:minHeight="0dp"
+                                android:paddingLeft="@dimen/_15sdp"
+                                android:paddingRight="@dimen/_15sdp"
+                                android:text="@string/change_driver"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </com.balysv.materialripple.MaterialRippleLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@color/notificationtextcolor" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.poshwash.android.customViews.CustomTexViewBold
+                            android:id="@+id/textView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:paddingRight="5dp"
+                            android:text="@string/job_detail"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <com.poshwash.android.customViews.CustomTexViewBold
+                            android:id="@+id/requestTypeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_toRightOf="@+id/textView"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_13sdp"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/carsRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/notificationtextcolor" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:gravity="top"
+                        android:orientation="horizontal">
+
+                        <com.poshwash.android.customViews.CustomTexViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:text="@string/location"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:text=":"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <com.poshwash.android.customViews.CustomTexViewRegular
+                            android:id="@+id/locationTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:maxLines="3"
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <com.poshwash.android.customViews.CustomTexViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/payment_method"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=":"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <com.poshwash.android.customViews.CustomTexViewRegular
+                            android:id="@+id/paymentModeTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_5sdp"
+                            android:maxLines="1"
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.poshwash.android.customViews.CustomTexViewBold
+                            android:id="@+id/promo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="@string/promoCode"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <com.poshwash.android.customViews.CustomTexViewRegular
+                            android:id="@+id/promocodeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:text="AJIDN334K"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_15sdp"
+                            android:visibility="gone" />
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/appliedPromoRecylerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_5sdp" />
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:mrl_rippleAlpha="0.1"
+                        app:mrl_rippleColor="@color/white"
+                        app:mrl_rippleDelayClick="true"
+                        app:mrl_rippleDimension="10dp"
+                        app:mrl_rippleDuration="350"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true"
+                        app:mrl_ripplePersistent="false"
+                        app:mrl_rippleRoundedCorners="@dimen/_30sdp">
+
+                        <com.poshwash.android.customViews.CustomTexViewBold
+                            android:id="@+id/confirmbBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:background="@drawable/mybuttonsubmit"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:text="@string/confirm"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_20"
+                            android:textStyle="bold" />
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:mrl_rippleAlpha="0.1"
+                        app:mrl_rippleColor="@color/white"
+                        app:mrl_rippleDelayClick="true"
+                        app:mrl_rippleDimension="10dp"
+                        app:mrl_rippleDuration="350"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true"
+                        app:mrl_ripplePersistent="false"
+                        app:mrl_rippleRoundedCorners="@dimen/_30sdp">
+
+                        <com.poshwash.android.customViews.CustomTexViewBold
+                            android:id="@+id/cancelBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:background="@drawable/mybuttonbrowse"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:text="@string/cancel"
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/textsize_20"
+                            android:textStyle="bold" />
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

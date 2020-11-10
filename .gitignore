@@ -1,0 +1,15 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+
+# Project exclude paths
+/CirclePageIndicator/build/
+/CirclePageIndicator/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/
+/imagechoose/build/
+/imagechoose/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/

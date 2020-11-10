@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_white_border"
+    android:orientation="vertical">
+
+    <com.poshwash.android.customViews.CustomTexViewBold
+        android:id="@+id/heading_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/skybluecolor"
+        android:gravity="center|start"
+        android:padding="10dp"
+        android:text="@string/select_time_slot"
+        android:textColor="@color/whitecolor"
+        android:textSize="20sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading_tv" />
+</RelativeLayout>

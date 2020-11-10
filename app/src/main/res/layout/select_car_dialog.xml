@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        android:background="@drawable/dialog_white_border"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/skybluecolor">
+
+            <com.poshwash.android.customViews.CustomTexViewBold
+                android:id="@+id/heading_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:layout_alignParentStart="true"
+                android:text="@string/select_cars"
+                android:textColor="@color/whitecolor"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/close"
+                android:id="@+id/iv_close"
+               android:layout_centerInParent="true"
+                android:layout_margin="@dimen/_5sdp"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading_tv">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:id="@+id/bottomLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/listview"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        app:mrl_rippleAlpha="0.1"
+                        android:visibility="gone"
+                        app:mrl_rippleColor="@color/white"
+                        app:mrl_rippleDelayClick="true"
+                        app:mrl_rippleDimension="10dp"
+                        app:mrl_rippleDuration="350"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true"
+                        app:mrl_ripplePersistent="false">
+
+                        <com.poshwash.android.customViews.CustomTexViewBold
+                            android:id="@+id/addVehicle_btn"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/background_dark_gray"
+                            android:gravity="center"
+                            android:paddingLeft="20dp"
+                            android:visibility="gone"
+                            android:paddingRight="20dp"
+                            android:text="@string/add_vehicle"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_20"
+                            android:textStyle="bold" />
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        app:mrl_rippleAlpha="0.1"
+                        app:mrl_rippleColor="@color/white"
+                        app:mrl_rippleDelayClick="true"
+                        app:mrl_rippleDimension="10dp"
+                        app:mrl_rippleDuration="350"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true"
+                        app:mrl_ripplePersistent="false">
+
+                        <com.poshwash.android.customViews.CustomTexViewBold
+                            android:id="@+id/next_btn"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/mybuttonsubmit"
+                            android:gravity="center"
+                            android:text="@string/next"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_20"
+                            android:textStyle="bold" />
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+</RelativeLayout>

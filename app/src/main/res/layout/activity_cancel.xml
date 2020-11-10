@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/skybluecolor">
+
+                <ImageView
+                    android:id="@+id/backIv"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/back_icon" />
+
+                <com.poshwash.android.customViews.CustomTexViewBold
+                    android:id="@+id/heading_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/backIv"
+                    android:gravity="center|start"
+                    android:padding="10dp"
+                    android:text="@string/cancel_request"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+            <View
+                android:id="@+id/sap"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightgraycolor" />
+
+            <com.poshwash.android.customViews.CustomTexView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center_vertical"
+                android:text="Cancel Request"
+                android:textColor="@color/blackcolor"
+                android:textSize="@dimen/_15sdp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.4"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/member_type_form_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:background="@drawable/rectangle_border">
+
+                            <Spinner
+                                android:id="@+id/spinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/rectangle_border">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/white"
+                        android:id="@+id/tv_cancel_message"
+                        android:hint="Enter message"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.6"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/promoRl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_below="@+id/member_type_form_layout"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/recentaglecornor"
+                    android:visibility="invisible">
+
+                    <com.poshwash.android.customViews.CustomEditTextFont
+                        android:id="@+id/promoCodeEt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/applyBtn"
+                        android:background="@null"
+                        android:hint="@string/enter_promo_code"
+                        android:imeOptions="actionDone"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:padding="@dimen/_8sdp"
+                        android:textColorHint="@color/texthintcolor"
+                        android:textCursorDrawable="@null"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.poshwash.android.customViews.CustomTexViewBold
+                        android:id="@+id/applyBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/mybuttonsubmit"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="5dp"
+                        android:text="@string/apply"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_18"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+
+
+                <!-- Congratulations! Refer code is applied successfully. F
+                lat 50% discount in next booking-->
+
+
+                    <com.poshwash.android.customViews.CustomTexViewBold
+                        android:id="@+id/cancel_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/mybuttonsubmit"
+                        android:gravity="center"
+                        android:paddingLeft="40dp"
+                        android:layout_gravity="center"
+                        android:paddingRight="40dp"
+                        android:text="@string/submit"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_18"
+                        android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+</layout>

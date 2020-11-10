@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/img_car"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:background="@drawable/recentgleimageview"
+            android:scaleType="centerCrop"
+            android:src="@drawable/no_image" />
+
+        <LinearLayout
+            android:id="@+id/a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3sdp"
+            android:layout_toEndOf="@+id/img_car"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.poshwash.android.customViews.CustomTexViewBold
+                    android:id="@+id/txt_carname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/signup_btn"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    tools:text="Touring Carjjjjjjjjd" />
+
+                <com.poshwash.android.customViews.CustomTexViewRegular
+                    android:id="@+id/membership_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text=""
+                    android:textColor="@color/graycolor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:gravity="center|start">
+
+                <com.poshwash.android.customViews.CustomTexViewRegular
+                    android:id="@+id/txt_username"
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_11sdp"
+                    tools:text="Neha vyas" />
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:id="@+id/rating_bar"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_toEndOf="@+id/txt_username"
+                    android:isIndicator="true"
+                    android:maxHeight="48dp"
+                    android:minHeight="15dp"
+                    android:numStars="5"
+                    app:mrb_progressTint="@color/ratingbar"
+                    app:mrb_secondaryProgressTint="@color/ratingbar"
+                    tools:rating="3" />
+
+
+                <com.poshwash.android.customViews.CustomTexViewBold
+                    android:id="@+id/txt_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_toEndOf="@+id/rating_bar"
+                    android:gravity="end"
+                    android:textColor="@color/greencolor"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold"
+                    tools:text="800.00" />
+
+
+            </RelativeLayout>
+
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/txt_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                tools:text="10:00 A.M. on 02-03-2017" />
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/status_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:gravity="start"
+                android:text=""
+                android:textColor="@color/greencolor"
+                android:visibility="gone" />
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/getfare_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:gravity="end"
+                android:text="@string/get_fare"
+                android:textColor="@color/skybluecolor"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+        <com.poshwash.android.customViews.CustomTexViewRegular
+            android:id="@+id/service_type_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_car"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="start"
+            android:text=""
+            android:textColor="@color/graycolor"
+            android:visibility="visible" />
+
+        <com.poshwash.android.customViews.CustomTexViewRegular
+            android:id="@+id/duration_type_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/service_type_tv"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="start"
+            android:text=""
+            android:textColor="@color/graycolor"
+            android:visibility="visible" />
+
+        <com.poshwash.android.customViews.CustomTexViewRegular
+            android:id="@+id/transaction_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/duration_type_tv"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="start"
+            android:text=""
+            android:textColor="@color/graycolor"
+            android:visibility="visible" />
+
+        <com.poshwash.android.customViews.CustomTexViewBold
+            android:id="@+id/txt_viewdeatil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/duration_type_tv"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:text="@string/view_detail"
+            android:textColor="@color/greencolor"
+            android:textSize="@dimen/_15sdp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/graycolor" />
+
+</LinearLayout>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/toggle_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/back" />
+            <!--android:text="@string/add_vehicle"-->
+            <com.poshwash.android.customViews.CustomTexViewBold
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="20dp"
+                android:text="@string/add_vehicle"
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/_15sdp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp" />
+
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionbar"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/make"
+                android:textSize="@dimen/_13sdp" />
+
+            <Spinner
+                android:id="@+id/spinner_make"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/recentaglecornor"
+                android:minHeight="?actionBarSize"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/blackcolor" />
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/model"
+                android:textSize="@dimen/_13sdp" />
+
+            <Spinner
+                android:id="@+id/spinner_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/recentaglecornor"
+                android:minHeight="?actionBarSize"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/blackcolor" />
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/plate_number"
+                android:textSize="@dimen/_13sdp" />
+
+            <com.poshwash.android.customViews.CustomEditTextFont
+                android:id="@+id/et_platenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/recentaglecornor"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890- "
+                android:hint="@string/enter_plate_number"
+                android:imeOptions="actionNext"
+                android:inputType="textCapCharacters"
+                android:maxLength="20"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingRight="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColorHint="@color/texthintcolor"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/color"
+                android:textSize="@dimen/_13sdp" />
+
+            <Spinner
+                android:id="@+id/spinner_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@drawable/recentaglecornor"
+                android:minHeight="?actionBarSize"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/blackcolor" />
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/vehicle_location"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone" />
+
+
+            <com.poshwash.android.customViews.CustomEditText
+                android:id="@+id/spi_vehiclelocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/recentaglecornor"
+                android:drawableEnd="@drawable/current_location"
+                android:focusable="false"
+                android:hint="@string/enter_location"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapSentences"
+                android:maxLength="250"
+                android:maxLines="1"
+                android:padding="@dimen/_5sdp"
+                android:textColorHint="@color/texthintcolor"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/layout_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10sdp">
+
+                <com.poshwash.android.customViews.CustomTexViewRegular
+                    android:id="@+id/txt_upload_vehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:text="@string/upload_vehicle_picture"
+                    android:textSize="@dimen/_13sdp" />
+
+                <com.balysv.materialripple.MaterialRippleLayout
+                    android:id="@+id/ripple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_toEndOf="@+id/txt_upload_vehicle"
+                    android:layout_toRightOf="@+id/txt_upload_vehicle"
+                    app:mrl_rippleAlpha="0.1"
+                    app:mrl_rippleBackground="#FFFFFF"
+                    app:mrl_rippleColor="@color/white"
+                    app:mrl_rippleDelayClick="true"
+                    app:mrl_rippleDimension="10dp"
+                    app:mrl_rippleDuration="350"
+                    app:mrl_rippleHover="true"
+                    app:mrl_rippleOverlay="true"
+                    app:mrl_ripplePersistent="false"
+                    app:mrl_rippleRoundedCorners="@dimen/_30sdp"
+                    tools:ignore="RtlHardcoded">
+
+
+                    <ImageView
+                        android:id="@+id/btn_browse"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/addvehicle" />
+
+                </com.balysv.materialripple.MaterialRippleLayout>
+
+            </RelativeLayout>
+
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:id="@+id/ripplealreay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginBottom="30dp"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="@color/white"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleDimension="10dp"
+                app:mrl_rippleDuration="350"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true"
+                app:mrl_ripplePersistent="false"
+                app:mrl_rippleRoundedCorners="@dimen/_30sdp">
+
+                <com.poshwash.android.customViews.CustomButtonBold
+                    android:id="@+id/btn_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/mybuttonsubmit"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp" />
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

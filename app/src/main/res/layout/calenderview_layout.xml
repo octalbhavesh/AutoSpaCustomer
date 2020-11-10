@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_white_border"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.poshwash.android.customViews.CustomTexViewBold
+        android:id="@+id/heading_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/skybluecolor"
+        android:gravity="center|start"
+        android:padding="10dp"
+        android:text="@string/select_dates"
+        android:textColor="@color/whitecolor"
+        android:textSize="20sp" />
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/heading_tv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:visibility="visible"
+        app:mcv_arrowColor="@color/skybluecolor"
+        app:mcv_dateTextAppearance="@style/TextAppearance.MyCustomDay"
+        app:mcv_headerTextAppearance="@style/TextAppearance.MyCustomheaderText"
+        app:mcv_selectionColor="@color/skybluecolor"
+        app:mcv_showOtherDates="none"
+        app:mcv_weekDayTextAppearance="@style/TextAppearance.MyCustomWeekDay" />
+
+
+</RelativeLayout>

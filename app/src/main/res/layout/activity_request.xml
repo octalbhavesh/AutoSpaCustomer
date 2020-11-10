@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/skybluecolor">
+
+            <ImageView
+                android:id="@+id/backIv"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/back_icon" />
+
+            <com.poshwash.android.customViews.CustomTexViewBold
+                android:id="@+id/heading_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/backIv"
+                android:gravity="center|start"
+                android:padding="10dp"
+                android:text="@string/select_request_type"
+                android:textColor="@color/whitecolor"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.4"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/member_type_form_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <View
+                    android:id="@+id/sap"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/lightgraycolor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sap"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/rectangle_border">
+
+                        <com.poshwash.android.customViews.CustomTexView
+                            android:id="@+id/date_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:drawableEnd="@drawable/calender"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:hint="@string/select_date"
+                            android:maxLines="2"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="7dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="7dp"
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:background="@drawable/rectangle_border">
+
+                        <com.poshwash.android.customViews.CustomTexView
+                            android:id="@+id/time_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:drawableEnd="@drawable/drodown"
+                            android:drawablePadding="10dp"
+                            android:gravity="center_vertical"
+                            android:hint="@string/select_time"
+                            android:maxLines="1"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="7dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="7dp"
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_1sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5">
+
+                        <LinearLayout
+                            android:id="@+id/layout_main1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+
+                                <com.poshwash.android.customViews.CustomTexView
+                                    android:id="@+id/txtPackageName"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:text="package name"
+                                    android:textColor="@color/blackcolor" />
+
+                                <LinearLayout
+                                    android:id="@+id/txtRenew1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal"
+                                    android:visibility="invisible"
+                                    android:weightSum="2">
+
+                                    <com.poshwash.android.customViews.CustomTexView
+
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="@dimen/_5sdp"
+                                        android:layout_weight="0.5"
+
+                                        android:background="@color/skybluecolor"
+                                        android:gravity="center"
+                                        android:padding="@dimen/_5sdp"
+                                        android:text="sadd"
+                                        android:textColor="@color/white" />
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <com.poshwash.android.customViews.CustomTexView
+                                android:id="@+id/txtDescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:gravity="center_vertical"
+                                android:maxLines="5"
+                                android:minLines="1"
+                                android:text="No Description"
+                                android:textColor="@color/blackcolor" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="0.5"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <RelativeLayout
+                            android:id="@+id/layout_discount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <com.poshwash.android.customViews.CustomTexView
+                                android:id="@+id/txtAmount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:gravity="end"
+                                android:text="$100"
+                                android:textColor="@color/red_900"
+                                android:textSize="@dimen/_13sdp" />
+
+                            <View
+                                android:layout_width="@dimen/_35sdp"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:background="@color/red_900" />
+
+                        </RelativeLayout>
+
+                        <com.poshwash.android.customViews.CustomTexView
+                            android:id="@+id/txtAmountDiscount"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="end"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:text="$100"
+                            android:textColor="@color/blackcolor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/promoRl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_below="@+id/member_type_form_layout"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/recentaglecornor">
+
+                <com.poshwash.android.customViews.CustomEditTextFont
+                    android:id="@+id/promoCodeEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/applyBtn"
+                    android:background="@null"
+                    android:hint="@string/enter_promo_code"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="15"
+                    android:maxLines="1"
+                    android:padding="@dimen/_8sdp"
+                    android:textColorHint="@color/texthintcolor"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.poshwash.android.customViews.CustomTexViewBold
+                    android:id="@+id/applyBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/mybuttonsubmit"
+                    android:gravity="center"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/apply"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_18"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <com.poshwash.android.customViews.CustomTexView
+                android:id="@+id/txt_offer_success"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:text="Congratulations! Refer code is applied successfully. Flat 50% discount in next booking"
+                android:textColor="#008000"
+                android:textSize="@dimen/_13sdp" />
+
+            <!-- Congratulations! Refer code is applied successfully. F
+            lat 50% discount in next booking-->
+            <com.balysv.materialripple.MaterialRippleLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/promoRl"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10sdp"
+                app:mrl_rippleAlpha="0.1"
+                app:mrl_rippleColor="@color/white"
+                app:mrl_rippleDelayClick="true"
+                app:mrl_rippleDimension="10dp"
+                app:mrl_rippleDuration="350"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true"
+                app:mrl_ripplePersistent="false">
+
+                <com.poshwash.android.customViews.CustomTexViewBold
+                    android:id="@+id/next_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/mybuttonsubmit"
+                    android:gravity="center"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:text="@string/next"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_18"
+                    android:textStyle="bold" />
+
+            </com.balysv.materialripple.MaterialRippleLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

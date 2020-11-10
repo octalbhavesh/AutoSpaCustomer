@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_white_border"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/skybluecolor">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/backIv"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_icon" />
+
+        <com.poshwash.android.customViews.CustomTexViewBold
+            android:id="@+id/heading_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/backIv"
+            android:gravity="center|start"
+            android:padding="10dp"
+            android:text="@string/choose_location"
+            android:textColor="@color/whitecolor"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/ripple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listview"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        app:mrl_rippleAlpha="0.1"
+        app:mrl_rippleBackground="#FFFFFF"
+        app:mrl_rippleColor="@color/white"
+        app:mrl_rippleDelayClick="true"
+        app:mrl_rippleDimension="10dp"
+        app:mrl_rippleDuration="350"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true"
+        app:mrl_ripplePersistent="false"
+        app:mrl_rippleRoundedCorners="@dimen/_30sdp">
+
+
+        <com.poshwash.android.customViews.CustomTexViewBold
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/mybuttonsubmit"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_20"
+            android:textStyle="bold" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/header">
+
+    </ListView>
+</RelativeLayout>

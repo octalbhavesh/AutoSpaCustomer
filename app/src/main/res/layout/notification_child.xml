@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--<com.chauthai.swipereveallayout.SwipeRevealLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:dragEdge="right"
+        app:mode="same_level">
+
+        <FrameLayout
+            android:id="@+id/frameDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@android:color/holo_red_dark"
+            android:padding="@dimen/_10sdp">
+
+            <autospa.Utils.CustomTexViewRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/delete"
+                android:textColor="@color/whitecolor"
+                android:textSize="@dimen/_12sdp" />
+
+        </FrameLayout>
+-->
+
+    <RelativeLayout
+        android:id="@+id/row_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleimageview"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:visibility="gone"
+            android:src="@drawable/user" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@+id/circleimageview"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.poshwash.android.customViews.CustomTexViewRegular
+                    android:id="@+id/userNameTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="John Doe"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <com.poshwash.android.customViews.CustomTexViewRegular
+                    android:id="@+id/txt_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/userNameTv"
+                    android:gravity="end"
+                    android:text="6 hour ago"
+                    android:textColor="@color/darkgraycolor"
+                    android:textSize="@dimen/_11sdp" />
+            </RelativeLayout>
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/txt_notificationtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:gravity="start"
+                android:maxLines="3"
+                android:text="Jone Doe"
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <!--  </com.chauthai.swipereveallayout.SwipeRevealLayout>-->
+</LinearLayout>

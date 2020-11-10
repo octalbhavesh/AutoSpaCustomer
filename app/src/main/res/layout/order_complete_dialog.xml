@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_border_logout"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_10sdp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_7sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/tickIv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/greentick" />
+
+            <com.poshwash.android.customViews.CustomTexViewRegular
+                android:id="@+id/orderCompleteTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/tickIv"
+                android:gravity="left"
+                android:padding="15dp"
+                android:paddingStart="@dimen/_10sdp"
+                android:text=""
+                android:textColor="@color/graycolor"
+                android:textSize="@dimen/_14sdp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightgraycolor" />
+
+        <com.poshwash.android.customViews.CustomTexViewBold
+            android:id="@+id/okTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="@string/done"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rr_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/backIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?actionBarSize"
+                    android:layout_marginStart="20dp"
+                    android:src="@drawable/back" />
+
+                <com.poshwash.android.customViews.CustomTexViewBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/booking_detail"
+                    android:textColor="@color/graycolor"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <ScrollView
+            android:id="@+id/ll_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"><!--Dynamic Data gone-->
+
+            <LinearLayout
+                android:id="@+id/detailLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--Static Data-->
+                    <ImageView
+                        android:id="@+id/detail_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_150sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/aboutusbanner" />
+
+                    <com.poshwash.android.customViews.CustomTexViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:gravity="bottom"
+                        android:id="@+id/detail_car_name"
+                        android:text="@string/job_duration"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_15sdp" />
+                    <!--Dynamic Data-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:id="@+id/pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_150sdp" />
+
+                        <com.viewpagerindicator.CirclePageIndicator
+                            android:id="@+id/mIndicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:padding="@dimen/_7sdp">
+
+                    <com.poshwash.android.customViews.CustomTexViewRegular
+                        android:id="@+id/detail_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20/06/2019 10:20 Am"
+                        android:textColor="@color/darkgraycolor"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.poshwash.android.customViews.CustomTexViewRegular
+                        android:id="@+id/detail_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="Completed"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_13sdp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/layout_main"
+                    android:padding="@dimen/_7sdp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/detail_driver_img"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/no_image" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_toStartOf="@+id/fareLL"
+                        android:layout_toEndOf="@+id/detail_driver_img"
+                        android:orientation="vertical">
+
+                        <com.poshwash.android.customViews.CustomTexViewRegular
+                            android:id="@+id/detail_driver_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Robin"
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_14sdp" />
+
+
+                        <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                            android:id="@+id/user_rating_bar"
+                            style="@style/Widget.MaterialRatingBar.RatingBar"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:isIndicator="true"
+                            android:maxHeight="40dp"
+                            android:minHeight="20dp"
+                            android:numStars="5"
+                            android:rating="0"
+                            app:mrb_progressTint="@color/ratingbar"
+                            app:mrb_secondaryProgressTint="@color/ratingbar" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fareLL"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <com.poshwash.android.customViews.CustomTexViewBold
+                            android:id="@+id/amountTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_17sdp" />
+
+                        <com.poshwash.android.customViews.CustomTexViewRegular
+                            android:id="@+id/detail_fare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/get_fare"
+                            android:visibility="gone"
+                            android:textColor="@color/blackcolor"
+                            android:textSize="@dimen/_15sdp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <com.poshwash.android.customViews.CustomTexViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/location"
+                    android:textColor="@color/graycolor"
+                    android:textSize="@dimen/_15sdp" />
+
+                <com.poshwash.android.customViews.CustomTexViewRegular
+                    android:id="@+id/detail_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:text="India"
+                    android:textColor="@color/graycolor"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center|start"
+                    android:orientation="horizontal">
+
+                    <com.poshwash.android.customViews.CustomTexViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="@string/plate_number"
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.poshwash.android.customViews.CustomTexViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.poshwash.android.customViews.CustomTexViewRegular
+                        android:id="@+id/detail_plate_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:text="Cash"
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cancelLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.poshwash.android.customViews.CustomTexViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cancellationdatetime"
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <com.poshwash.android.customViews.CustomTexViewRegular
+                            android:id="@+id/cancelTimeTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/graycolor"
+                            android:textSize="@dimen/_13sdp" />
+
+                    </LinearLayout>
+
+                    <com.poshwash.android.customViews.CustomTexViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel_reason"
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.poshwash.android.customViews.CustomTexViewRegular
+                        android:id="@+id/reasonTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/graycolor"
+                        android:textSize="@dimen/_13sdp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.poshwash.android.customViews.CustomTexViewRegular
+            android:id="@+id/no_data_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textColor="@color/graycolor"
+            android:textSize="@dimen/_15sdp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</layout>

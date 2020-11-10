@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:id="@+id/rlTitle"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize">
+
+            <ImageView
+                android:id="@+id/back_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:src="@drawable/back" />
+
+            <com.poshwash.android.customViews.CustomTexView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="OTP"
+                android:textColor="@color/blackcolor"
+                android:textSize="@dimen/_16sdp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/rlTitle"
+            android:background="@color/blackcolor" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_20sdp"
+                android:paddingRight="@dimen/_20sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/img_poshwash" />
+
+                <com.poshwash.android.customViews.CustomTexViewBold
+                    android:id="@+id/otp_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:gravity="center"
+                    android:text="Verify Your Number"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/connect_sign_up"
+                    android:textStyle="bold" />
+
+                <com.poshwash.android.customViews.CustomTexViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:text="@string/otp_text"
+                    android:textColor="@color/blackcolor"
+                    android:textSize="@dimen/_13sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.poshwash.android.customViews.CustomEditText
+                        android:id="@+id/edtOne"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@color/grey_300"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textColor="@color/blackcolor"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.poshwash.android.customViews.CustomEditText
+                        android:id="@+id/edtTwo"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@color/grey_300"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textColor="@color/blackcolor"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.poshwash.android.customViews.CustomEditText
+                        android:id="@+id/edtThree"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@color/grey_300"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textColor="@color/blackcolor"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.poshwash.android.customViews.CustomEditText
+                        android:id="@+id/edtFour"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@color/grey_300"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:textColor="@color/blackcolor"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:orientation="vertical">
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/ripple"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:mrl_rippleAlpha="0.1"
+                        app:mrl_rippleBackground="#FFFFFF"
+                        app:mrl_rippleColor="@color/white"
+                        app:mrl_rippleDelayClick="true"
+                        app:mrl_rippleDimension="10dp"
+                        app:mrl_rippleDuration="350"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true"
+                        app:mrl_ripplePersistent="false">
+
+                        <com.poshwash.android.customViews.CustomButtonBold
+                            android:id="@+id/btn_submit"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:background="@drawable/background_button"
+                            android:padding="@dimen/_10sdp"
+                            android:text="@string/submit"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp"
+                            android:textStyle="bold" />
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                    <com.balysv.materialripple.MaterialRippleLayout
+                        android:id="@+id/resendRipple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        app:mrl_rippleAlpha="0.1"
+                        app:mrl_rippleColor="@color/white"
+                        app:mrl_rippleDelayClick="true"
+                        app:mrl_rippleDimension="10dp"
+                        app:mrl_rippleDuration="350"
+                        app:mrl_rippleHover="true"
+                        app:mrl_rippleOverlay="true"
+                        app:mrl_ripplePersistent="false">
+
+                        <com.poshwash.android.customViews.CustomTexViewRegular
+                            android:id="@+id/regenrate_otp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/resend_otp"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </com.balysv.materialripple.MaterialRippleLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>
